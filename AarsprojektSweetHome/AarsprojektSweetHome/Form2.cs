@@ -29,7 +29,24 @@ namespace AarsprojektSweetHome
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
