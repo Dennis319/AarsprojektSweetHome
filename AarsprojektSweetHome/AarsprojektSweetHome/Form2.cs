@@ -68,7 +68,7 @@ namespace AarsprojektSweetHome
             //get current time
             int hh = DateTime.Now.Hour;
             int mm = DateTime.Now.Minute;
-            int hh2 = DateTime.Now.Hour + 1;
+            int hh2 = DateTime.Now.Hour - 1;
 
             //time
             string time = "";
