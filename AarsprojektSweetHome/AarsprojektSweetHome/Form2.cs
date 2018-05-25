@@ -25,8 +25,10 @@ namespace AarsprojektSweetHome
                                  "Database=sweethomedb1;" +
                                  "Server=den1.mssql6.gear.host;" + // not localhost
                                  "Connect Timeout=45");
-
-
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+        
         
 
 
@@ -74,6 +76,9 @@ namespace AarsprojektSweetHome
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sweethomedb1DataSet2.Boliger2' table. You can move, or remove it, as needed.
+            //this.boliger2TableAdapter.Fill(this.sweethomedb1DataSet2.Boliger2);
+          
             //timer interval
             t.Interval = 1000;  //in milliseconds
 
@@ -157,48 +162,48 @@ namespace AarsprojektSweetHome
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-                conn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }*/
-
+            
             conn.Open(); //Åbner forbindelse til databasen
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Boliger2 VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "')";
+            cmd = new SqlCommand("INSERT INTO Boliger2 VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "')",conn);
             cmd.ExecuteNonQuery();
-            conn.Close();
-
-            try
-            {
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-
-            disp_data();
             MessageBox.Show("Oprettelse gennemført");
+            conn.Close();
+            disp_data();
+            ClearData();
+                                  
+            
         }
 
         public void disp_data() //Opdatere DataGridView
         {
             conn.Open();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * from Boliger2";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
+            adapt = new SqlDataAdapter("SELECT * FROM Boliger2", conn);
+            dt = new DataTable();
+            adapt.Fill(dt);
             dataGridView1.DataSource = dt;
-
             conn.Close();
+        }
+
+        //Clear Data  
+        private void ClearData()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -206,10 +211,11 @@ namespace AarsprojektSweetHome
             conn.Open(); //Åbner forbindelse til databasen
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "DELETE FROM Ordre WHERE OId = '" + textBox1.Text + " ' ";
+            cmd.CommandText = "DELETE FROM Boliger2 WHERE Adresse = '" + textBox1.Text + " ' ";
             cmd.ExecuteNonQuery();
             conn.Close();
             disp_data();
+            ClearData();
             MessageBox.Show("Sletning gennemført");
         }
 
@@ -222,6 +228,7 @@ namespace AarsprojektSweetHome
             cmd.ExecuteNonQuery();
             conn.Close();
             disp_data();
+            ClearData();
             MessageBox.Show("Opdatering af gennemført");
         }
 
@@ -230,7 +237,7 @@ namespace AarsprojektSweetHome
             conn.Open(); //Åbner forbindelse til databasen
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM Ordre WHERE Dato BETWEEN '" + textBox1.Text + "' AND '" + textBox2.Text + "'";
+            cmd.CommandText = "SELECT * FROM Boliger2 WHERE Adresse '" + textBox17.Text + "'";
             cmd.ExecuteNonQuery();
             conn.Close();
         }
@@ -238,6 +245,12 @@ namespace AarsprojektSweetHome
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            disp_data();
+            ClearData();
         }
     }
 }

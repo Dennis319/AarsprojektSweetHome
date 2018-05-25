@@ -64,6 +64,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sweethomedb1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="sweethomedb1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sweethomedb1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sweethomedb1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sweethomedb1DataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +108,28 @@
     </None>
     <None Include="sweethomedb1DataSet.xss">
       <DependentUpon>sweethomedb1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sweethomedb1DataSet1.xsc">
+      <DependentUpon>sweethomedb1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sweethomedb1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sweethomedb1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sweethomedb1DataSet1.xss">
+      <DependentUpon>sweethomedb1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sweethomedb1DataSet2.xsc">
+      <DependentUpon>sweethomedb1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sweethomedb1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sweethomedb1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sweethomedb1DataSet2.xss">
+      <DependentUpon>sweethomedb1DataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
