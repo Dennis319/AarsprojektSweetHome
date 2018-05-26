@@ -162,26 +162,62 @@ namespace AarsprojektSweetHome
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                String sqlString = "SET TRANSACTION ISOLATION LEVEL REPEATABLE READ";
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+               
+                sqlString = "BEGIN TRANSACTION";
+                cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+                
+                cmd = new SqlCommand("INSERT INTO Boliger2 VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "')", conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Oprettelse gennemført");
+                disp_data();
+                ClearData();
+
+                sqlString = "COMMIT"; // or ROLLBACK
+                cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+
+                try
+                {
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        
+            else
+            {
+                MessageBox.Show("Indtast venligst boligdata.");
+            }
             
-            conn.Open(); //Åbner forbindelse til databasen
-            cmd = new SqlCommand("INSERT INTO Boliger2 VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "')",conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Oprettelse gennemført");
-            conn.Close();
-            disp_data();
-            ClearData();
-                                  
+            
             
         }
 
         public void disp_data() //Opdatere DataGridView
         {
-            conn.Open();
+            
             adapt = new SqlDataAdapter("SELECT * FROM Boliger2", conn);
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
-            conn.Close();
+            
         }
 
         //Clear Data  
@@ -203,43 +239,66 @@ namespace AarsprojektSweetHome
             textBox14.Text = "";
             textBox15.Text = "";
             textBox16.Text = "";
-           
+            textBox17.Text = "";
+            textBox18.Text = "";
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conn.Open(); //Åbner forbindelse til databasen
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "DELETE FROM Boliger2 WHERE Adresse = '" + textBox1.Text + " ' ";
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            disp_data();
-            ClearData();
-            MessageBox.Show("Sletning gennemført");
+            if (textBox1.Text != "")
+            {
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM Boliger2 WHERE Adresse = '" + textBox1.Text + " ' ";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                disp_data();
+                ClearData();
+                MessageBox.Show("Sletning gennemført");
+            }
+            else
+            {
+                MessageBox.Show("Indtast venligst i adressefeltet");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            conn.Open(); //Åbner forbindelse til databasen
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE Ordre SET Serienummer = '" + textBox2.Text + "', KId = '" + textBox3.Text + "', AId = '" + textBox4.Text + "', OPris = '" + textBox5.Text + "', Dato = '" + textBox6.Text + "' WHERE OId = '" + textBox1.Text + "'";
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            disp_data();
-            ClearData();
-            MessageBox.Show("Opdatering af gennemført");
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Boliger2 SET Adresse = '" + textBox1.Text + "', Bydel = '" + textBox2.Text + "', Kontantpris = '" + textBox3.Text + "', Ejerudgift = '" + textBox4.Text + "', Kvm = '" + textBox5.Text + "', Udbetaling = '" + textBox6.Text + "', BruttoNettoMinusEjerudgift = '" + textBox7.Text + "', Prisudvikling = '" + textBox8.Text + "', Byggeår = '" + textBox9.Text + "', Grundareal = '" + textBox10.Text + "', Kælderareal = '" + textBox11.Text + "', AntaSoveværelser = '" + textBox12.Text + "', Boligareal = '" + textBox13.Text + "', AntalRum = '" + textBox14.Text + "', Energimærke = '" + textBox15.Text + "', Sagsnr = '" + textBox16.Text + "' WHERE BoligID = '" + textBox18.Text + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                disp_data();
+                ClearData();
+                MessageBox.Show("Opdatering af gennemført");
+            }
+            else
+            {
+                MessageBox.Show("Indtast venligst bolig data");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            conn.Open(); //Åbner forbindelse til databasen
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM Boliger2 WHERE Adresse '" + textBox17.Text + "'";
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (textBox17.Text != "")
+            {
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Boliger2 WHERE Adresse '" + textBox17.Text + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            else
+            {
+                MessageBox.Show("Indtast venligst en adresse");
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

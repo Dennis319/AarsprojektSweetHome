@@ -32,6 +32,25 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Crud = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.boligIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bydelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kontantprisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ejerudgiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kvmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.udbetalingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prisudviklingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.byggeårDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grundarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kælderarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.antaSoveværelserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boligarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.antalRumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.energimærkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sagsnrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boliger2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sweethomedb1DataSet2 = new AarsprojektSweetHome.sweethomedb1DataSet2();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -81,32 +100,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.sweethomedb1DataSet2 = new AarsprojektSweetHome.sweethomedb1DataSet2();
-            this.boliger2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boliger2TableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet2TableAdapters.Boliger2TableAdapter();
-            this.boligIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bydelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kontantprisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ejerudgiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kvmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.udbetalingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prisudviklingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.byggeårDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grundarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kælderarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antaSoveværelserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.boligarealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antalRumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.energimærkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sagsnrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Crud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -127,6 +128,7 @@
             // 
             // Crud
             // 
+            this.Crud.Controls.Add(this.textBox18);
             this.Crud.Controls.Add(this.dataGridView1);
             this.Crud.Controls.Add(this.button4);
             this.Crud.Controls.Add(this.textBox17);
@@ -172,6 +174,119 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(367, 259);
             this.dataGridView1.TabIndex = 14;
+            // 
+            // boligIDDataGridViewTextBoxColumn
+            // 
+            this.boligIDDataGridViewTextBoxColumn.DataPropertyName = "BoligID";
+            this.boligIDDataGridViewTextBoxColumn.HeaderText = "BoligID";
+            this.boligIDDataGridViewTextBoxColumn.Name = "boligIDDataGridViewTextBoxColumn";
+            this.boligIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresseDataGridViewTextBoxColumn
+            // 
+            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
+            // 
+            // bydelDataGridViewTextBoxColumn
+            // 
+            this.bydelDataGridViewTextBoxColumn.DataPropertyName = "Bydel";
+            this.bydelDataGridViewTextBoxColumn.HeaderText = "Bydel";
+            this.bydelDataGridViewTextBoxColumn.Name = "bydelDataGridViewTextBoxColumn";
+            // 
+            // kontantprisDataGridViewTextBoxColumn
+            // 
+            this.kontantprisDataGridViewTextBoxColumn.DataPropertyName = "Kontantpris";
+            this.kontantprisDataGridViewTextBoxColumn.HeaderText = "Kontantpris";
+            this.kontantprisDataGridViewTextBoxColumn.Name = "kontantprisDataGridViewTextBoxColumn";
+            // 
+            // ejerudgiftDataGridViewTextBoxColumn
+            // 
+            this.ejerudgiftDataGridViewTextBoxColumn.DataPropertyName = "Ejerudgift";
+            this.ejerudgiftDataGridViewTextBoxColumn.HeaderText = "Ejerudgift";
+            this.ejerudgiftDataGridViewTextBoxColumn.Name = "ejerudgiftDataGridViewTextBoxColumn";
+            // 
+            // kvmDataGridViewTextBoxColumn
+            // 
+            this.kvmDataGridViewTextBoxColumn.DataPropertyName = "Kvm";
+            this.kvmDataGridViewTextBoxColumn.HeaderText = "Kvm";
+            this.kvmDataGridViewTextBoxColumn.Name = "kvmDataGridViewTextBoxColumn";
+            // 
+            // udbetalingDataGridViewTextBoxColumn
+            // 
+            this.udbetalingDataGridViewTextBoxColumn.DataPropertyName = "Udbetaling";
+            this.udbetalingDataGridViewTextBoxColumn.HeaderText = "Udbetaling";
+            this.udbetalingDataGridViewTextBoxColumn.Name = "udbetalingDataGridViewTextBoxColumn";
+            // 
+            // bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn
+            // 
+            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.DataPropertyName = "BruttoNettoMinusEjerudgift";
+            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.HeaderText = "BruttoNettoMinusEjerudgift";
+            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.Name = "bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn";
+            // 
+            // prisudviklingDataGridViewTextBoxColumn
+            // 
+            this.prisudviklingDataGridViewTextBoxColumn.DataPropertyName = "Prisudvikling";
+            this.prisudviklingDataGridViewTextBoxColumn.HeaderText = "Prisudvikling";
+            this.prisudviklingDataGridViewTextBoxColumn.Name = "prisudviklingDataGridViewTextBoxColumn";
+            // 
+            // byggeårDataGridViewTextBoxColumn
+            // 
+            this.byggeårDataGridViewTextBoxColumn.DataPropertyName = "Byggeår";
+            this.byggeårDataGridViewTextBoxColumn.HeaderText = "Byggeår";
+            this.byggeårDataGridViewTextBoxColumn.Name = "byggeårDataGridViewTextBoxColumn";
+            // 
+            // grundarealDataGridViewTextBoxColumn
+            // 
+            this.grundarealDataGridViewTextBoxColumn.DataPropertyName = "Grundareal";
+            this.grundarealDataGridViewTextBoxColumn.HeaderText = "Grundareal";
+            this.grundarealDataGridViewTextBoxColumn.Name = "grundarealDataGridViewTextBoxColumn";
+            // 
+            // kælderarealDataGridViewTextBoxColumn
+            // 
+            this.kælderarealDataGridViewTextBoxColumn.DataPropertyName = "Kælderareal";
+            this.kælderarealDataGridViewTextBoxColumn.HeaderText = "Kælderareal";
+            this.kælderarealDataGridViewTextBoxColumn.Name = "kælderarealDataGridViewTextBoxColumn";
+            // 
+            // antaSoveværelserDataGridViewTextBoxColumn
+            // 
+            this.antaSoveværelserDataGridViewTextBoxColumn.DataPropertyName = "AntaSoveværelser";
+            this.antaSoveværelserDataGridViewTextBoxColumn.HeaderText = "AntaSoveværelser";
+            this.antaSoveværelserDataGridViewTextBoxColumn.Name = "antaSoveværelserDataGridViewTextBoxColumn";
+            // 
+            // boligarealDataGridViewTextBoxColumn
+            // 
+            this.boligarealDataGridViewTextBoxColumn.DataPropertyName = "Boligareal";
+            this.boligarealDataGridViewTextBoxColumn.HeaderText = "Boligareal";
+            this.boligarealDataGridViewTextBoxColumn.Name = "boligarealDataGridViewTextBoxColumn";
+            // 
+            // antalRumDataGridViewTextBoxColumn
+            // 
+            this.antalRumDataGridViewTextBoxColumn.DataPropertyName = "AntalRum";
+            this.antalRumDataGridViewTextBoxColumn.HeaderText = "AntalRum";
+            this.antalRumDataGridViewTextBoxColumn.Name = "antalRumDataGridViewTextBoxColumn";
+            // 
+            // energimærkeDataGridViewTextBoxColumn
+            // 
+            this.energimærkeDataGridViewTextBoxColumn.DataPropertyName = "Energimærke";
+            this.energimærkeDataGridViewTextBoxColumn.HeaderText = "Energimærke";
+            this.energimærkeDataGridViewTextBoxColumn.Name = "energimærkeDataGridViewTextBoxColumn";
+            // 
+            // sagsnrDataGridViewTextBoxColumn
+            // 
+            this.sagsnrDataGridViewTextBoxColumn.DataPropertyName = "Sagsnr";
+            this.sagsnrDataGridViewTextBoxColumn.HeaderText = "Sagsnr";
+            this.sagsnrDataGridViewTextBoxColumn.Name = "sagsnrDataGridViewTextBoxColumn";
+            // 
+            // boliger2BindingSource
+            // 
+            this.boliger2BindingSource.DataMember = "Boliger2";
+            this.boliger2BindingSource.DataSource = this.sweethomedb1DataSet2;
+            // 
+            // sweethomedb1DataSet2
+            // 
+            this.sweethomedb1DataSet2.DataSetName = "sweethomedb1DataSet2";
+            this.sweethomedb1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -539,11 +654,11 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(171, 363);
+            this.button3.Location = new System.Drawing.Point(170, 362);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 43);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Opdatér ud fra adresse";
+            this.button3.Text = "Opdatér ud fra BoligID";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -658,122 +773,16 @@
             this.label21.TabIndex = 8;
             this.label21.Text = "LON -";
             // 
-            // sweethomedb1DataSet2
-            // 
-            this.sweethomedb1DataSet2.DataSetName = "sweethomedb1DataSet2";
-            this.sweethomedb1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // boliger2BindingSource
-            // 
-            this.boliger2BindingSource.DataMember = "Boliger2";
-            this.boliger2BindingSource.DataSource = this.sweethomedb1DataSet2;
-            // 
             // boliger2TableAdapter
             // 
             this.boliger2TableAdapter.ClearBeforeFill = true;
             // 
-            // boligIDDataGridViewTextBoxColumn
+            // textBox18
             // 
-            this.boligIDDataGridViewTextBoxColumn.DataPropertyName = "BoligID";
-            this.boligIDDataGridViewTextBoxColumn.HeaderText = "BoligID";
-            this.boligIDDataGridViewTextBoxColumn.Name = "boligIDDataGridViewTextBoxColumn";
-            this.boligIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresseDataGridViewTextBoxColumn
-            // 
-            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
-            // 
-            // bydelDataGridViewTextBoxColumn
-            // 
-            this.bydelDataGridViewTextBoxColumn.DataPropertyName = "Bydel";
-            this.bydelDataGridViewTextBoxColumn.HeaderText = "Bydel";
-            this.bydelDataGridViewTextBoxColumn.Name = "bydelDataGridViewTextBoxColumn";
-            // 
-            // kontantprisDataGridViewTextBoxColumn
-            // 
-            this.kontantprisDataGridViewTextBoxColumn.DataPropertyName = "Kontantpris";
-            this.kontantprisDataGridViewTextBoxColumn.HeaderText = "Kontantpris";
-            this.kontantprisDataGridViewTextBoxColumn.Name = "kontantprisDataGridViewTextBoxColumn";
-            // 
-            // ejerudgiftDataGridViewTextBoxColumn
-            // 
-            this.ejerudgiftDataGridViewTextBoxColumn.DataPropertyName = "Ejerudgift";
-            this.ejerudgiftDataGridViewTextBoxColumn.HeaderText = "Ejerudgift";
-            this.ejerudgiftDataGridViewTextBoxColumn.Name = "ejerudgiftDataGridViewTextBoxColumn";
-            // 
-            // kvmDataGridViewTextBoxColumn
-            // 
-            this.kvmDataGridViewTextBoxColumn.DataPropertyName = "Kvm";
-            this.kvmDataGridViewTextBoxColumn.HeaderText = "Kvm";
-            this.kvmDataGridViewTextBoxColumn.Name = "kvmDataGridViewTextBoxColumn";
-            // 
-            // udbetalingDataGridViewTextBoxColumn
-            // 
-            this.udbetalingDataGridViewTextBoxColumn.DataPropertyName = "Udbetaling";
-            this.udbetalingDataGridViewTextBoxColumn.HeaderText = "Udbetaling";
-            this.udbetalingDataGridViewTextBoxColumn.Name = "udbetalingDataGridViewTextBoxColumn";
-            // 
-            // bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn
-            // 
-            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.DataPropertyName = "BruttoNettoMinusEjerudgift";
-            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.HeaderText = "BruttoNettoMinusEjerudgift";
-            this.bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn.Name = "bruttoNettoMinusEjerudgiftDataGridViewTextBoxColumn";
-            // 
-            // prisudviklingDataGridViewTextBoxColumn
-            // 
-            this.prisudviklingDataGridViewTextBoxColumn.DataPropertyName = "Prisudvikling";
-            this.prisudviklingDataGridViewTextBoxColumn.HeaderText = "Prisudvikling";
-            this.prisudviklingDataGridViewTextBoxColumn.Name = "prisudviklingDataGridViewTextBoxColumn";
-            // 
-            // byggeårDataGridViewTextBoxColumn
-            // 
-            this.byggeårDataGridViewTextBoxColumn.DataPropertyName = "Byggeår";
-            this.byggeårDataGridViewTextBoxColumn.HeaderText = "Byggeår";
-            this.byggeårDataGridViewTextBoxColumn.Name = "byggeårDataGridViewTextBoxColumn";
-            // 
-            // grundarealDataGridViewTextBoxColumn
-            // 
-            this.grundarealDataGridViewTextBoxColumn.DataPropertyName = "Grundareal";
-            this.grundarealDataGridViewTextBoxColumn.HeaderText = "Grundareal";
-            this.grundarealDataGridViewTextBoxColumn.Name = "grundarealDataGridViewTextBoxColumn";
-            // 
-            // kælderarealDataGridViewTextBoxColumn
-            // 
-            this.kælderarealDataGridViewTextBoxColumn.DataPropertyName = "Kælderareal";
-            this.kælderarealDataGridViewTextBoxColumn.HeaderText = "Kælderareal";
-            this.kælderarealDataGridViewTextBoxColumn.Name = "kælderarealDataGridViewTextBoxColumn";
-            // 
-            // antaSoveværelserDataGridViewTextBoxColumn
-            // 
-            this.antaSoveværelserDataGridViewTextBoxColumn.DataPropertyName = "AntaSoveværelser";
-            this.antaSoveværelserDataGridViewTextBoxColumn.HeaderText = "AntaSoveværelser";
-            this.antaSoveværelserDataGridViewTextBoxColumn.Name = "antaSoveværelserDataGridViewTextBoxColumn";
-            // 
-            // boligarealDataGridViewTextBoxColumn
-            // 
-            this.boligarealDataGridViewTextBoxColumn.DataPropertyName = "Boligareal";
-            this.boligarealDataGridViewTextBoxColumn.HeaderText = "Boligareal";
-            this.boligarealDataGridViewTextBoxColumn.Name = "boligarealDataGridViewTextBoxColumn";
-            // 
-            // antalRumDataGridViewTextBoxColumn
-            // 
-            this.antalRumDataGridViewTextBoxColumn.DataPropertyName = "AntalRum";
-            this.antalRumDataGridViewTextBoxColumn.HeaderText = "AntalRum";
-            this.antalRumDataGridViewTextBoxColumn.Name = "antalRumDataGridViewTextBoxColumn";
-            // 
-            // energimærkeDataGridViewTextBoxColumn
-            // 
-            this.energimærkeDataGridViewTextBoxColumn.DataPropertyName = "Energimærke";
-            this.energimærkeDataGridViewTextBoxColumn.HeaderText = "Energimærke";
-            this.energimærkeDataGridViewTextBoxColumn.Name = "energimærkeDataGridViewTextBoxColumn";
-            // 
-            // sagsnrDataGridViewTextBoxColumn
-            // 
-            this.sagsnrDataGridViewTextBoxColumn.DataPropertyName = "Sagsnr";
-            this.sagsnrDataGridViewTextBoxColumn.HeaderText = "Sagsnr";
-            this.sagsnrDataGridViewTextBoxColumn.Name = "sagsnrDataGridViewTextBoxColumn";
+            this.textBox18.Location = new System.Drawing.Point(252, 376);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(39, 20);
+            this.textBox18.TabIndex = 15;
             // 
             // Form2
             // 
@@ -792,10 +801,10 @@
             this.Crud.ResumeLayout(false);
             this.Crud.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -875,5 +884,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn antalRumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn energimærkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sagsnrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox18;
     }
 }
