@@ -311,5 +311,29 @@ namespace AarsprojektSweetHome
             disp_data();
             ClearData();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox22.Text != "")
+            {
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Ordre WHERE Dato BETWEEN '" + textBox1.Text + "' AND '" + textBox2.Text + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            else
+            {
+                MessageBox.Show("Indtast venligst adresse.");
+            }
+        }
     }
 }

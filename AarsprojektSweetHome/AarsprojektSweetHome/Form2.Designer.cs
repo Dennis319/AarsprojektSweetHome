@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Crud = new System.Windows.Forms.TabPage();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.boligIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,13 +102,28 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.boliger2TableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet2TableAdapters.Boliger2TableAdapter();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Crud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -143,9 +159,17 @@
             this.Crud.Padding = new System.Windows.Forms.Padding(3);
             this.Crud.Size = new System.Drawing.Size(780, 412);
             this.Crud.TabIndex = 0;
-            this.Crud.Text = "Crud";
+            this.Crud.Text = "Opret boliger";
             this.Crud.UseVisualStyleBackColor = true;
             this.Crud.Click += new System.EventHandler(this.Crud_Click);
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(252, 376);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(43, 20);
+            this.textBox18.TabIndex = 15;
+            this.textBox18.Text = "BoligID";
             // 
             // dataGridView1
             // 
@@ -686,12 +710,26 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox23);
+            this.tabPage2.Controls.Add(this.textBox22);
+            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Controls.Add(this.button10);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.textBox21);
+            this.tabPage2.Controls.Add(this.textBox20);
+            this.tabPage2.Controls.Add(this.textBox19);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(780, 412);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Salg af hus";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
@@ -777,12 +815,123 @@
             // 
             this.boliger2TableAdapter.ClearBeforeFill = true;
             // 
-            // textBox18
+            // button7
             // 
-            this.textBox18.Location = new System.Drawing.Point(252, 376);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(39, 20);
-            this.textBox18.TabIndex = 15;
+            this.button7.Location = new System.Drawing.Point(699, 383);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "Exit";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(4, 362);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 47);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Opret";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(108, 168);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 2;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(108, 194);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.TabIndex = 3;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(108, 220);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.TabIndex = 4;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 168);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(90, 13);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Hus solgt til (i kr.):";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(12, 194);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(43, 13);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Solg af:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 220);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 13);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Dato for salg:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(214, 95);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(560, 243);
+            this.dataGridView2.TabIndex = 8;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(85, 362);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 47);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "Slet ud fra BoligID";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(166, 362);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 47);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "Opdater ud fra BoligID";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(214, 51);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(125, 23);
+            this.button11.TabIndex = 11;
+            this.button11.Text = "Søg ud fra adresse";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(345, 53);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 12;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(248, 383);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(43, 20);
+            this.textBox23.TabIndex = 13;
+            this.textBox23.Text = "BoligID";
             // 
             // Form2
             // 
@@ -805,6 +954,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -885,5 +1037,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn energimærkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sagsnrDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox23;
     }
 }
