@@ -76,9 +76,11 @@ namespace AarsprojektSweetHome
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sweethomedb1DataSet3.Huse' table. You can move, or remove it, as needed.
+            //this.huseTableAdapter.Fill(this.sweethomedb1DataSet3.Huse);
             // TODO: This line of code loads data into the 'sweethomedb1DataSet2.Boliger2' table. You can move, or remove it, as needed.
             //this.boliger2TableAdapter.Fill(this.sweethomedb1DataSet2.Boliger2);
-          
+
             //timer interval
             t.Interval = 1000;  //in milliseconds
 
@@ -181,7 +183,7 @@ namespace AarsprojektSweetHome
                 cmd = new SqlCommand(sqlString, conn);
                 cmd.ExecuteNonQuery();
                 
-                cmd = new SqlCommand("INSERT INTO Boliger2 VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "')", conn);
+                cmd = new SqlCommand("INSERT INTO Huse VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "','" + textBox24.Text + "')", conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Oprettelse gennemført");
                 disp_data();
@@ -213,7 +215,7 @@ namespace AarsprojektSweetHome
         public void disp_data() //Opdatere DataGridView
         {
             
-            adapt = new SqlDataAdapter("SELECT * FROM Boliger2", conn);
+            adapt = new SqlDataAdapter("SELECT * FROM huse", conn);
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -241,7 +243,7 @@ namespace AarsprojektSweetHome
             textBox16.Text = "";
             textBox17.Text = "";
             textBox18.Text = "";
-
+            textBox24.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -251,7 +253,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM Boliger2 WHERE Adresse = '" + textBox1.Text + " ' ";
+                cmd.CommandText = "DELETE FROM Huse WHERE Adresse = '" + textBox1.Text + " ' ";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 disp_data();
@@ -271,7 +273,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Boliger2 SET Adresse = '" + textBox1.Text + "', Bydel = '" + textBox2.Text + "', Kontantpris = '" + textBox3.Text + "', Ejerudgift = '" + textBox4.Text + "', Kvm = '" + textBox5.Text + "', Udbetaling = '" + textBox6.Text + "', BruttoNettoMinusEjerudgift = '" + textBox7.Text + "', Prisudvikling = '" + textBox8.Text + "', Byggeår = '" + textBox9.Text + "', Grundareal = '" + textBox10.Text + "', Kælderareal = '" + textBox11.Text + "', AntaSoveværelser = '" + textBox12.Text + "', Boligareal = '" + textBox13.Text + "', AntalRum = '" + textBox14.Text + "', Energimærke = '" + textBox15.Text + "', Sagsnr = '" + textBox16.Text + "' WHERE BoligID = '" + textBox18.Text + "'";
+                cmd.CommandText = "UPDATE Huse SET Adresse = '" + textBox1.Text + "', Postnr = '" + textBox2.Text + "', Grundareal = '" + textBox3.Text + "', Kælderareal = '" + textBox4.Text + "', Boligareal = '" + textBox5.Text + "', GarageCarport = '" + textBox6.Text + "', Kvmpris = '" + textBox7.Text + "', Antalsoveværelser = '" + textBox8.Text + "', Antalrum = '" + textBox9.Text + "', Ejendomstype = '" + textBox10.Text + "', Byggår = '" + textBox11.Text + "', Kontantpris = '" + textBox12.Text + "', Ejerudgiftprmd = '" + textBox13.Text + "', Udbetaling = '" + textBox14.Text + "', Prisudvikling = '" + textBox15.Text + "', En = '" + textBox16.Text + "', Sagsnr = '" + textBox24.Text + "' WHERE Hid = '" + textBox18.Text + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 disp_data();
@@ -291,7 +293,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Boliger2 WHERE Adresse '" + textBox17.Text + "'";
+                cmd.CommandText = "SELECT * FROM Huse WHERE Adresse '" + textBox17.Text + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -326,7 +328,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Ordre WHERE Dato BETWEEN '" + textBox1.Text + "' AND '" + textBox2.Text + "'";
+                cmd.CommandText = "SELECT * FROM Huse WHERE Dato BETWEEN '" + textBox1.Text + "' AND '" + textBox2.Text + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -334,6 +336,16 @@ namespace AarsprojektSweetHome
             {
                 MessageBox.Show("Indtast venligst adresse.");
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
