@@ -312,7 +312,7 @@ namespace AarsprojektSweetHome
         {
             disp_data();
             ClearData();
-            MessageBox.Show("Sync Working");
+            MessageBox.Show("Dennis er sej");
         }
 
         private void button7_Click(object sender, EventArgs e)
