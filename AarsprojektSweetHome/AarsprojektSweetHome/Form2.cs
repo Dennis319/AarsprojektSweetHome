@@ -312,7 +312,7 @@ namespace AarsprojektSweetHome
         {
             disp_data();
             ClearData();
-            MessageBox.Show("Sync Working");
+            MessageBox.Show("Sync Working 1");
         }
 
         private void button7_Click(object sender, EventArgs e)
