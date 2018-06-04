@@ -29,7 +29,8 @@ namespace AarsprojektSweetHome
         SqlDataAdapter adapt;
         DataTable dt;
         
-        
+
+
 
 
         public Form2()
@@ -256,8 +257,7 @@ namespace AarsprojektSweetHome
                 cmd.CommandText = "DELETE FROM Huse WHERE Adresse = '" + textBox1.Text + " ' ";
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                disp_data();
-                ClearData();
+                
                 MessageBox.Show("Sletning gennemført");
             }
             else
@@ -291,10 +291,20 @@ namespace AarsprojektSweetHome
             if (textBox17.Text != "")
             {
                 conn.Open(); //Åbner forbindelse til databasen
+
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Huse WHERE Adresse '" + textBox17.Text + "'";
-                cmd.ExecuteNonQuery();
+
+                adapt = new SqlDataAdapter("SELECT * FROM huse", conn);
+                dt = new DataTable();
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                             
+
+                DataView DV = new DataView(dt);
+
+                DV.RowFilter = string.Format("Adresse LIKE '%{0}%'", textBox17.Text);
+
+                dataGridView1.DataSource = DV;
                 conn.Close();
             }
             else
