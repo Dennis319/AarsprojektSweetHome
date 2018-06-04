@@ -322,7 +322,7 @@ namespace AarsprojektSweetHome
         {
             disp_data();
             ClearData();
-            MessageBox.Show("Dennis er den sejeste");
+            MessageBox.Show("Data cleared");
         }
 
         private void button7_Click(object sender, EventArgs e)
