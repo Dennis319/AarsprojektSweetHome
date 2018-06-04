@@ -334,7 +334,8 @@ namespace AarsprojektSweetHome
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (textBox22.Text != "")
+            //Skelet til koden af salg af hus faneblad 2
+            /*if (textBox22.Text != "")
             {
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
@@ -346,7 +347,7 @@ namespace AarsprojektSweetHome
             else
             {
                 MessageBox.Show("Indtast venligst adresse.");
-            }
+            }*/
         }
 
         private void button8_Click(object sender, EventArgs e)
