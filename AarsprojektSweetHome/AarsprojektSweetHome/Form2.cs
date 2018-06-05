@@ -243,7 +243,7 @@ namespace AarsprojektSweetHome
             textBox15.Text = "";
             textBox16.Text = "";
             textBox17.Text = "";
-            textBox18.Text = "";
+            textBox18.Text = "Hus ID";
             textBox24.Text = "";
         }
 
