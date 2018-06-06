@@ -136,10 +136,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 438);
+            this.tabControl1.Size = new System.Drawing.Size(788, 437);
             this.tabControl1.TabIndex = 0;
             // 
             // Crud
@@ -157,7 +157,7 @@
             this.Crud.Location = new System.Drawing.Point(4, 22);
             this.Crud.Name = "Crud";
             this.Crud.Padding = new System.Windows.Forms.Padding(3);
-            this.Crud.Size = new System.Drawing.Size(780, 412);
+            this.Crud.Size = new System.Drawing.Size(780, 411);
             this.Crud.TabIndex = 0;
             this.Crud.Text = "Opret boliger";
             this.Crud.UseVisualStyleBackColor = true;
@@ -353,7 +353,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(363, 255);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(363, 254);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // textBox3
@@ -637,7 +637,7 @@
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button6.Location = new System.Drawing.Point(699, 383);
+            this.button6.Location = new System.Drawing.Point(699, 382);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 9;
@@ -658,7 +658,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(170, 362);
+            this.button3.Location = new System.Drawing.Point(170, 361);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 43);
             this.button3.TabIndex = 2;
@@ -669,7 +669,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(89, 362);
+            this.button2.Location = new System.Drawing.Point(89, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 44);
             this.button2.TabIndex = 1;
@@ -680,7 +680,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(7, 362);
+            this.button1.Location = new System.Drawing.Point(7, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 44);
             this.button1.TabIndex = 0;
@@ -706,7 +706,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(780, 412);
+            this.tabPage2.Size = new System.Drawing.Size(780, 411);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Salg af hus";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -832,9 +832,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 412);
+            this.tabPage1.Size = new System.Drawing.Size(780, 411);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Hus Fordeler (kladde)";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -842,9 +842,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(780, 412);
+            this.tabPage3.Size = new System.Drawing.Size(780, 411);
             this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Statestik";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -852,7 +852,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(780, 412);
+            this.tabPage4.Size = new System.Drawing.Size(780, 411);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Bo\'s vindue";
             this.tabPage4.UseVisualStyleBackColor = true;
