@@ -150,7 +150,8 @@ namespace AarsprojektSweetHome
 
 
 
-            //Ur.Join();
+            
+
            
             //update label
             label1.Text = output2;
