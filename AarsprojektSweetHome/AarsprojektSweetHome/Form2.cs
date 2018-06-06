@@ -57,6 +57,37 @@ namespace AarsprojektSweetHome
 
             conn.Close();
 
+
+
+
+            conn.Open(); //Åbner forbindelse til databasen
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Huse WHERE Hid>0";
+            cmd.ExecuteNonQuery();
+
+
+
+            DataTable dt5 = new DataTable(); // Datagridview top venstre fordelingsvindue
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt5);
+            dataGridView3.DataSource = dt5;
+
+
+
+
+            double[] fordelerarray = new double[30];
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
@@ -508,5 +539,25 @@ namespace AarsprojektSweetHome
         }
 
         #endregion
+
+
+
+
+
+
+        #region Fordelervindue
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        #endregion
+
+
+
+
+
     }
 }
