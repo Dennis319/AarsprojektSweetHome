@@ -28,8 +28,6 @@ namespace AarsprojektSweetHome
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
-        
-
 
 
 
@@ -38,6 +36,26 @@ namespace AarsprojektSweetHome
 
             InitializeComponent();
             disp_data();
+
+            conn.Open();
+            SqlCommand sc = new SqlCommand("select BrugerID,Navn from ejendomsmæglere", conn);
+            
+            SqlDataReader reader;
+
+            reader = sc.ExecuteReader();
+            DataTable dt2 = new DataTable();
+
+            dt2.Columns.Add("customerid", typeof(string));
+            dt2.Columns.Add("contactname", typeof(string));
+            dt2.Load(reader);
+
+            comboBox1.ValueMember = "BrugerID";
+            comboBox1.DisplayMember = "Navn";
+            comboBox1.DataSource = dt2;
+
+
+            conn.Close();
+
         }
 
 
@@ -184,7 +202,7 @@ namespace AarsprojektSweetHome
                 cmd = new SqlCommand(sqlString, conn);
                 cmd.ExecuteNonQuery();
                 
-                cmd = new SqlCommand("INSERT INTO Huse VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "','" + textBox24.Text + "')", conn);
+                cmd = new SqlCommand("INSERT INTO Huse VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "','" + textBox12.Text + "','" + textBox13.Text + "','" + textBox14.Text + "','" + textBox15.Text + "','" + textBox16.Text + "','" + textBox24.Text + "','" + 0 + "','" + 0 + "','" + null + "','" + null + "')", conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Oprettelse gennemført");
                 disp_data();
@@ -220,8 +238,12 @@ namespace AarsprojektSweetHome
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
-            
+                       
+            dataGridView2.DataSource = dt;
+
         }
+
+
 
         //Clear Data  
         private void ClearData()
@@ -254,7 +276,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM Huse WHERE Adresse = '" + textBox1.Text + " ' ";
+                cmd.CommandText = "DELETE FROM Huse WHERE Adresse = '" + textBox18.Text + " ' ";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 
@@ -273,7 +295,7 @@ namespace AarsprojektSweetHome
                 conn.Open(); //Åbner forbindelse til databasen
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE Huse SET Adresse = '" + textBox1.Text + "', Postnr = '" + textBox2.Text + "', Grundareal = '" + textBox3.Text + "', Kælderareal = '" + textBox4.Text + "', Boligareal = '" + textBox5.Text + "', GarageCarport = '" + textBox6.Text + "', Kvmpris = '" + textBox7.Text + "', Antalsoveværelser = '" + textBox8.Text + "', Antalrum = '" + textBox9.Text + "', Ejendomstype = '" + textBox10.Text + "', Byggår = '" + textBox11.Text + "', Kontantpris = '" + textBox12.Text + "', Ejerudgiftprmd = '" + textBox13.Text + "', Udbetaling = '" + textBox14.Text + "', Prisudvikling = '" + textBox15.Text + "', En = '" + textBox16.Text + "', Sagsnr = '" + textBox24.Text + "' WHERE Hid = '" + textBox18.Text + "'";
+                cmd.CommandText = "UPDATE Huse SET Adresse = '" + textBox1.Text + "', Postnr = '" + textBox2.Text + "', Grundareal = '" + textBox3.Text + "', Kælderareal = '" + textBox4.Text + "', Boligareal = '" + textBox5.Text + "', GarageCarport = '" + textBox6.Text + "', Kvmpris = '" + textBox7.Text + "', Antalsoveværelser = '" + textBox8.Text + "', Antalrum = '" + textBox9.Text + "', Ejendomstype = '" + textBox10.Text + "', Byggeår = '" + textBox11.Text + "', Kontantpris = '" + textBox12.Text + "', Ejerudgiftprmd = '" + textBox13.Text + "', Udbetaling = '" + textBox14.Text + "', Prisudvikling = '" + textBox15.Text + "', Energimærke = '" + textBox16.Text + "', Sagsnr = '" + textBox24.Text + "' WHERE Hid = '" + textBox18.Text + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 disp_data();
@@ -306,6 +328,8 @@ namespace AarsprojektSweetHome
 
                 dataGridView1.DataSource = DV;
                 conn.Close();
+
+                //textBox14.Text = "";
             }
             else
             {
@@ -334,30 +358,112 @@ namespace AarsprojektSweetHome
 
         private void button11_Click(object sender, EventArgs e)
         {
-            //Skelet til koden af salg af hus faneblad 2
-            /*if (textBox22.Text != "")
+            if (textBox22.Text != "")
             {
                 conn.Open(); //Åbner forbindelse til databasen
+
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Huse WHERE Dato BETWEEN '" + textBox1.Text + "' AND '" + textBox2.Text + "'";
-                cmd.ExecuteNonQuery();
+
+                adapt = new SqlDataAdapter("SELECT * FROM huse", conn);
+                dt = new DataTable();
+                adapt.Fill(dt);
+                dataGridView2.DataSource = dt;
+
+
+                DataView DV = new DataView(dt);
+
+                DV.RowFilter = string.Format("Adresse LIKE '%{0}%'", textBox22.Text);
+
+                dataGridView2.DataSource = DV;
                 conn.Close();
             }
             else
             {
-                MessageBox.Show("Indtast venligst adresse.");
-            }*/
+                MessageBox.Show("Indtast venligst en adresse");
+            }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e) //Opret salg
         {
+            
+            if (textBox19.Text != "" && textBox23.Text != "BoligID")
+            {
+
+                string s = "";
+                if (comboBox1.SelectedIndex >= 0)
+                    s = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+
+                
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Huse SET Salgsstatus = '" + 1 + "', salgsprisen = '" + textBox19.Text + "', SolgtAfMedarbejder = '" + comboBox1.SelectedValue.ToString() + "' , DatoForSalg = '" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "' WHERE Hid = '" + textBox23.Text + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                disp_data();
+                ClearData();
+                MessageBox.Show("Opdatering af gennemført");
+
+               
+
+            }
+
+            else
+            {
+                MessageBox.Show("Indtast venligst boligdata.");
+            }
+
 
         }
 
         private void textBox18_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (true)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ID = comboBox1.SelectedValue.ToString();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            conn.Open(); //Åbner forbindelse til databasen
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE Huse SET Salgsstatus = '" + 0 + "', salgsprisen = '" + 0 + "', SolgtAfMedarbejder = '" + null + "' , DatoForSalg = '" + null + "' WHERE Hid = '" + textBox23.Text + "'";
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            disp_data();
+            ClearData();
+            MessageBox.Show("Opdatering af gennemført");
         }
     }
 }
