@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient; //SQL connection
+using System.Threading;
 
 namespace AarsprojektSweetHome
 {
     public partial class Form2 : Form
     {
-        Timer t = new Timer();
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
 
         
 
@@ -112,11 +113,27 @@ namespace AarsprojektSweetHome
         //timer eventhandler
         private void t_Tick(object sender, EventArgs e)
         {
+
+            Thread Ur = new Thread(Traad);
+            Ur.Start();
+
+
+
+            //Ur.Join();
+           
+            //update label
+            label1.Text = output2;
+            label19.Text = output1;
+
+            
+        }
+
+        public static void Traad()
+        {
             //get current time
             int hh = DateTime.Now.Hour;
             int mm = DateTime.Now.Minute;
             int hh2 = DateTime.Now.Hour - 1;
-
             //time
             string time = "";
             string time2 = "";
@@ -140,10 +157,10 @@ namespace AarsprojektSweetHome
             {
                 time += mm;
             }
-            
 
-           
-            
+
+
+
             // London time
             if (hh2 < 10)
             {
@@ -163,13 +180,29 @@ namespace AarsprojektSweetHome
             {
                 time2 += mm;
             }
+
+            var Field1 = new Form2();
+            Field1.Output1 = time;
+
+            var Field2 = new Form2();
+            Field2.Output2 = time2;
+
             
 
-           
-            //update label
-            label1.Text = time2;
-            label19.Text = time;
+            
+
+
         }
+        //field for kbh
+        public static string output1;
+
+        public string Output1 { get => output1; set => output1 = value; }
+
+        //field for lon
+        public static string output2;
+
+        public string Output2 { get => output2; set => output2 = value; }
+
 
         private void label19_Click(object sender, EventArgs e)
         {
@@ -465,5 +498,15 @@ namespace AarsprojektSweetHome
             ClearData();
             MessageBox.Show("Opdatering af gennemført");
         }
+
+
+        #region Statestik Beregner
+
+        private void btnBeregnStat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }
