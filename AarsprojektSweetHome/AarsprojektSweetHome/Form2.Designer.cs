@@ -854,7 +854,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(780, 412);
             this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Bo\'s vindue";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // boliger2BindingSource
