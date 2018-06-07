@@ -580,9 +580,9 @@
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label34.Location = new System.Drawing.Point(3, 113);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(179, 16);
+            this.label34.Size = new System.Drawing.Size(143, 16);
             this.label34.TabIndex = 9;
-            this.label34.Text = "Gennemsnit salg i DKK (mio):";
+            this.label34.Text = "Gennemsnit salg i DKK";
             // 
             // label33
             // 
@@ -591,9 +591,9 @@
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label33.Location = new System.Drawing.Point(3, 86);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(139, 16);
+            this.label33.Size = new System.Drawing.Size(103, 16);
             this.label33.TabIndex = 8;
-            this.label33.Text = "Total salg i DKK (mio):";
+            this.label33.Text = "Total salg i DKK";
             // 
             // label32
             // 

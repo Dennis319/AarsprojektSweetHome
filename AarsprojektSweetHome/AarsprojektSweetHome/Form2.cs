@@ -474,6 +474,13 @@ namespace AarsprojektSweetHome
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
+                decimal Pris = Convert.ToDecimal(textBox19.Text);
+                conn.Open(); //Rasmus Statistik Kode
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Ejendomsmæglere SET TotalSum = '" + Pris + "' + TotalSum WHERE BrugerID = '" + comboBox1.SelectedValue.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
                 disp_data();
                 ClearData();
                 MessageBox.Show("Opdatering af gennemført");
@@ -567,6 +574,29 @@ namespace AarsprojektSweetHome
             label51.Text = Convert.ToString(dataGridView6.Rows[4].Cells[6].Value);
             label55.Text = Convert.ToString(dataGridView6.Rows[5].Cells[6].Value);
 
+            //Total salg i DKK
+
+            label36.Text = Convert.ToString(dataGridView6.Rows[0].Cells[7].Value);
+            label40.Text = Convert.ToString(dataGridView6.Rows[1].Cells[7].Value);
+            label44.Text = Convert.ToString(dataGridView6.Rows[2].Cells[7].Value);
+            label48.Text = Convert.ToString(dataGridView6.Rows[3].Cells[7].Value);
+            label52.Text = Convert.ToString(dataGridView6.Rows[4].Cells[7].Value);
+            label56.Text = Convert.ToString(dataGridView6.Rows[5].Cells[7].Value);
+
+            //Gennemsnit salg i DKK
+            decimal BoSnit = Decimal.Parse(label36.Text) / Decimal.Parse(label35.Text);
+            decimal RasmusSnit = Decimal.Parse(label40.Text) / Decimal.Parse(label39.Text);
+            decimal FrederikSnit = Decimal.Parse(label44.Text) / Decimal.Parse(label43.Text);
+            decimal DennisSnit = Decimal.Parse(label48.Text) / Decimal.Parse(label47.Text);
+            decimal IbSnit = Decimal.Parse(label52.Text) / Decimal.Parse(label51.Text);
+            decimal JonSnit = Decimal.Parse(label56.Text) / Decimal.Parse(label55.Text);
+
+            label37.Text = Convert.ToString(BoSnit);
+            label41.Text = Convert.ToString(RasmusSnit);
+            label45.Text = Convert.ToString(FrederikSnit);
+            label49.Text = Convert.ToString(DennisSnit);
+            label53.Text = Convert.ToString(IbSnit);
+            label57.Text = Convert.ToString(JonSnit);
         }
 
         #endregion
