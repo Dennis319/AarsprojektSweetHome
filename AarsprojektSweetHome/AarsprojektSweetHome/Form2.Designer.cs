@@ -42,33 +42,26 @@
             this.huseTableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet3TableAdapters.HuseTableAdapter();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnBeregnStat = new System.Windows.Forms.Button();
-            this.label58 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -256,33 +249,26 @@
             // 
             this.tabPage3.Controls.Add(this.dataGridView6);
             this.tabPage3.Controls.Add(this.btnBeregnStat);
-            this.tabPage3.Controls.Add(this.label58);
             this.tabPage3.Controls.Add(this.label57);
             this.tabPage3.Controls.Add(this.label56);
             this.tabPage3.Controls.Add(this.label55);
-            this.tabPage3.Controls.Add(this.label54);
             this.tabPage3.Controls.Add(this.label53);
             this.tabPage3.Controls.Add(this.label52);
             this.tabPage3.Controls.Add(this.label51);
-            this.tabPage3.Controls.Add(this.label50);
             this.tabPage3.Controls.Add(this.label49);
             this.tabPage3.Controls.Add(this.label48);
             this.tabPage3.Controls.Add(this.label47);
-            this.tabPage3.Controls.Add(this.label46);
             this.tabPage3.Controls.Add(this.label45);
             this.tabPage3.Controls.Add(this.label44);
             this.tabPage3.Controls.Add(this.label43);
-            this.tabPage3.Controls.Add(this.label42);
             this.tabPage3.Controls.Add(this.label41);
             this.tabPage3.Controls.Add(this.label40);
             this.tabPage3.Controls.Add(this.label39);
-            this.tabPage3.Controls.Add(this.label38);
             this.tabPage3.Controls.Add(this.label37);
             this.tabPage3.Controls.Add(this.label36);
             this.tabPage3.Controls.Add(this.label35);
             this.tabPage3.Controls.Add(this.label34);
             this.tabPage3.Controls.Add(this.label33);
-            this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.label31);
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label29);
@@ -308,17 +294,6 @@
             this.btnBeregnStat.Text = "Beregn";
             this.btnBeregnStat.UseVisualStyleBackColor = true;
             this.btnBeregnStat.Click += new System.EventHandler(this.btnBeregnStat_Click);
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label58.Location = new System.Drawing.Point(708, 140);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(15, 16);
-            this.label58.TabIndex = 33;
-            this.label58.Text = "0";
             // 
             // label57
             // 
@@ -353,17 +328,6 @@
             this.label55.TabIndex = 30;
             this.label55.Text = "0";
             // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label54.Location = new System.Drawing.Point(653, 140);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(15, 16);
-            this.label54.TabIndex = 29;
-            this.label54.Text = "0";
-            // 
             // label53
             // 
             this.label53.AutoSize = true;
@@ -396,17 +360,6 @@
             this.label51.Size = new System.Drawing.Size(15, 16);
             this.label51.TabIndex = 26;
             this.label51.Text = "0";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label50.Location = new System.Drawing.Point(522, 140);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(15, 16);
-            this.label50.TabIndex = 25;
-            this.label50.Text = "0";
             // 
             // label49
             // 
@@ -441,17 +394,6 @@
             this.label47.TabIndex = 22;
             this.label47.Text = "0";
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label46.Location = new System.Drawing.Point(407, 140);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(15, 16);
-            this.label46.TabIndex = 21;
-            this.label46.Text = "0";
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -485,17 +427,6 @@
             this.label43.TabIndex = 18;
             this.label43.Text = "0";
             // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label42.Location = new System.Drawing.Point(281, 140);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(15, 16);
-            this.label42.TabIndex = 17;
-            this.label42.Text = "0";
-            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -528,17 +459,6 @@
             this.label39.Size = new System.Drawing.Size(15, 16);
             this.label39.TabIndex = 14;
             this.label39.Text = "0";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label38.Location = new System.Drawing.Point(201, 140);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(15, 16);
-            this.label38.TabIndex = 13;
-            this.label38.Text = "0";
             // 
             // label37
             // 
@@ -594,16 +514,6 @@
             this.label33.Size = new System.Drawing.Size(103, 16);
             this.label33.TabIndex = 8;
             this.label33.Text = "Total salg i DKK";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(3, 140);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(92, 16);
-            this.label32.TabIndex = 7;
-            this.label32.Text = "Total salg i %:";
             // 
             // label31
             // 
@@ -1513,33 +1423,26 @@
         private sweethomedb1DataSet3TableAdapters.HuseTableAdapter huseTableAdapter;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnBeregnStat;
-        private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
