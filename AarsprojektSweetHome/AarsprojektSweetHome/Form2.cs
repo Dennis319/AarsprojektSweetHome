@@ -59,7 +59,7 @@ namespace AarsprojektSweetHome
 
 
 
-
+            
             conn.Open(); //Åbner forbindelse til databasen
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -74,7 +74,7 @@ namespace AarsprojektSweetHome
             dataGridView3.DataSource = dt5;
 
             conn.Close();
-
+            
 
             double[] fordelerarray = new double[30];
 
@@ -474,8 +474,9 @@ namespace AarsprojektSweetHome
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
+                //Rasmus Statistik Kode
                 decimal Pris = Convert.ToDecimal(textBox19.Text);
-                conn.Open(); //Rasmus Statistik Kode
+                conn.Open(); 
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE Ejendomsmæglere SET TotalSum = '" + Pris + "' + TotalSum WHERE BrugerID = '" + comboBox1.SelectedValue.ToString() + "'";
                 cmd.ExecuteNonQuery();
@@ -607,17 +608,28 @@ namespace AarsprojektSweetHome
 
 
         #region Fordelervindue
-
+       
+        //Tilføj bolig
         private void button12_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow row in this.dataGridView3.SelectedRows)
+            {
+                object[] rowData = new object[row.Cells.Count];
+                for (int i = 0; i < rowData.Length; ++i)
+                {
+                    rowData[i] = row.Cells[i].Value;
+                }
+                this.dataGridView4.Rows.Add(rowData);
+            }
         }
 
+        //Fordel
+        private void button13_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         #endregion
-
-
-
 
 
     }
