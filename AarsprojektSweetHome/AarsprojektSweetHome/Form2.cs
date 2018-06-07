@@ -545,6 +545,27 @@ namespace AarsprojektSweetHome
 
         private void btnBeregnStat_Click(object sender, EventArgs e)
         {
+            //Ejendomsmægler Data
+            conn.Open(); //Åbner forbindelse til databasen
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Ejendomsmæglere";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt10 = new DataTable(); 
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt10);
+            dataGridView6.DataSource = dt10;
+
+            conn.Close();
+
+            //Solgte enheder
+            label35.Text = Convert.ToString(dataGridView6.Rows[0].Cells[6].Value);
+            label39.Text = Convert.ToString(dataGridView6.Rows[1].Cells[6].Value);
+            label43.Text = Convert.ToString(dataGridView6.Rows[2].Cells[6].Value);
+            label47.Text = Convert.ToString(dataGridView6.Rows[3].Cells[6].Value);
+            label51.Text = Convert.ToString(dataGridView6.Rows[4].Cells[6].Value);
+            label55.Text = Convert.ToString(dataGridView6.Rows[5].Cells[6].Value);
 
         }
 
