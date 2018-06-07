@@ -500,9 +500,9 @@
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label34.Location = new System.Drawing.Point(3, 113);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(143, 16);
+            this.label34.Size = new System.Drawing.Size(147, 16);
             this.label34.TabIndex = 9;
-            this.label34.Text = "Gennemsnit salg i DKK";
+            this.label34.Text = "Gennemsnitssalg i DKK";
             // 
             // label33
             // 
