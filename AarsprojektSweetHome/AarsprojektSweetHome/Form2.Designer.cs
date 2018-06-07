@@ -41,6 +41,7 @@
             this.boliger2TableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet2TableAdapters.Boliger2TableAdapter();
             this.huseTableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet3TableAdapters.HuseTableAdapter();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.btnBeregnStat = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
@@ -70,13 +71,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label59 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -149,15 +145,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.huseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -165,7 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // huseBindingSource
@@ -278,11 +271,19 @@
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(780, 411);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Statistik";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(8, 230);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(766, 165);
+            this.dataGridView6.TabIndex = 35;
             // 
             // btnBeregnStat
             // 
@@ -588,37 +589,16 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label59);
-            this.tabPage1.Controls.Add(this.textBox20);
             this.tabPage1.Controls.Add(this.button13);
-            this.tabPage1.Controls.Add(this.button12);
             this.tabPage1.Controls.Add(this.button10);
-            this.tabPage1.Controls.Add(this.dataGridView5);
-            this.tabPage1.Controls.Add(this.dataGridView4);
             this.tabPage1.Controls.Add(this.dataGridView3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(780, 411);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Hus Fordeler";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(363, 86);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(58, 13);
-            this.label59.TabIndex = 7;
-            this.label59.Text = "Indtast Hid";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(352, 102);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(79, 20);
-            this.textBox20.TabIndex = 6;
             // 
             // button13
             // 
@@ -629,16 +609,6 @@
             this.button13.Text = "Fordel huse";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(352, 128);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "Vælg hus";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(699, 382);
@@ -647,22 +617,6 @@
             this.button10.TabIndex = 3;
             this.button10.Text = "Exit";
             this.button10.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(8, 205);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(467, 200);
-            this.dataGridView5.TabIndex = 2;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(437, 6);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(340, 193);
-            this.dataGridView4.TabIndex = 1;
             // 
             // dataGridView3
             // 
@@ -689,7 +643,7 @@
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(780, 411);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Salg af hus";
@@ -825,7 +779,7 @@
             this.Crud.Controls.Add(this.button1);
             this.Crud.Location = new System.Drawing.Point(4, 22);
             this.Crud.Name = "Crud";
-            this.Crud.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Crud.Padding = new System.Windows.Forms.Padding(3);
             this.Crud.Size = new System.Drawing.Size(780, 411);
             this.Crud.TabIndex = 0;
             this.Crud.Text = "Opret boliger";
@@ -1287,7 +1241,7 @@
             // textBox24
             // 
             this.textBox24.Location = new System.Drawing.Point(109, 402);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(101, 20);
             this.textBox24.TabIndex = 33;
@@ -1362,14 +1316,6 @@
             this.tabControl1.Size = new System.Drawing.Size(788, 437);
             this.tabControl1.TabIndex = 0;
             // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(8, 230);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(766, 165);
-            this.dataGridView6.TabIndex = 35;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1389,10 +1335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1403,7 +1347,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1451,13 +1394,8 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
