@@ -548,7 +548,7 @@ namespace AarsprojektSweetHome
         }
 
 
-        #region Statestik Beregner
+        #region Statistik Beregner
 
         private void btnBeregnStat_Click(object sender, EventArgs e)
         {
