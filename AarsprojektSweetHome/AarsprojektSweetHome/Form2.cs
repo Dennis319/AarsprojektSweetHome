@@ -73,7 +73,7 @@ namespace AarsprojektSweetHome
             da.Fill(dt5);
             dataGridView3.DataSource = dt5;
 
-
+            conn.Close();
 
 
             double[] fordelerarray = new double[30];
@@ -330,7 +330,9 @@ namespace AarsprojektSweetHome
             textBox15.Text = "";
             textBox16.Text = "";
             textBox17.Text = "";
-            textBox18.Text = "Hus ID";
+            textBox18.Text = "Bolig ID";
+            textBox19.Text = "";
+            textBox23.Text = "Bolig ID";
             textBox24.Text = "";
         }
 
@@ -465,6 +467,13 @@ namespace AarsprojektSweetHome
                 cmd.CommandText = "UPDATE Huse SET Salgsstatus = '" + 1 + "', salgsprisen = '" + textBox19.Text + "', SolgtAfMedarbejder = '" + comboBox1.SelectedValue.ToString() + "' , DatoForSalg = '" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "' WHERE Hid = '" + textBox23.Text + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
+
+                conn.Open(); //Åbner forbindelse til databasen
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE Ejendomsmæglere SET SolgteHuse = SolgteHuse + 1 WHERE BrugerID = '" + comboBox1.SelectedValue.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
                 disp_data();
                 ClearData();
                 MessageBox.Show("Opdatering af gennemført");
