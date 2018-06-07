@@ -626,7 +626,13 @@ namespace AarsprojektSweetHome
         //Fordel
         private void button13_Click(object sender, EventArgs e)
         {
-            
+            this.dataGridView4.Sort(this.dataGridView4.Columns["Column12"], ListSortDirection.Descending);
+
+            for (int i = 0; i < dataGridView4.RowCount; i++)
+            {
+                
+                
+            }
         }
 
         #endregion
