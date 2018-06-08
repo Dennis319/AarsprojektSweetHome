@@ -628,11 +628,58 @@ namespace AarsprojektSweetHome
         {
             this.dataGridView4.Sort(this.dataGridView4.Columns["Column12"], ListSortDirection.Descending);
 
-            for (int i = 0; i < dataGridView4.RowCount; i++)
+            
+
+            foreach (DataGridViewRow selRow in dataGridView4.SelectedRows.OfType<DataGridViewRow>().ToArray())
             {
+                decimal Counter5 = dataGridView5.RowCount;
+                decimal Counter7 = dataGridView7.RowCount;
+                decimal Counter8 = dataGridView8.RowCount;
+                decimal Counter9 = dataGridView9.RowCount;
+                decimal Counter10 = dataGridView10.RowCount;
+                decimal Counter11 = dataGridView11.RowCount;
+                decimal Countersnit = (Counter5 + Counter7 + Counter8 + Counter9 + Counter10 + Counter11) / 6;
+
+                if (dataGridView7.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView7.Rows.Add(selRow);
+                }
+
+                else if (dataGridView8.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView8.Rows.Add(selRow);
+                }
+
+                else if (dataGridView9.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView9.Rows.Add(selRow);
+                }
+
+                else if (dataGridView10.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView10.Rows.Add(selRow);
+                }
+
+                else if (dataGridView11.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView11.Rows.Add(selRow);
+                }
+
+                else if (dataGridView5.RowCount <= Countersnit)
+                {
+                    dataGridView4.Rows.Remove(selRow);
+                    dataGridView5.Rows.Add(selRow);
+                }
                 
-                
+
             }
+            decimal Counter = dataGridView5.RowCount - 1;
+            
         }
 
         #endregion
