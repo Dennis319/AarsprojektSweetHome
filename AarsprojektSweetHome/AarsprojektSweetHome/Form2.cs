@@ -609,7 +609,7 @@ namespace AarsprojektSweetHome
 
         #region Fordelervindue
        
-        //Tilføj bolig
+        //Tilføj bolig til udvalgte boliger
         private void button12_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in this.dataGridView3.SelectedRows)
