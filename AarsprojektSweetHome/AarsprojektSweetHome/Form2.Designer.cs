@@ -41,6 +41,12 @@
             this.boliger2TableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet2TableAdapters.Boliger2TableAdapter();
             this.huseTableAdapter = new AarsprojektSweetHome.sweethomedb1DataSet3TableAdapters.HuseTableAdapter();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.btnBeregnStat = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
@@ -250,12 +256,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.huseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sweethomedb1DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boliger2BindingSource)).BeginInit();
@@ -401,6 +401,66 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Statistik";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox21.Location = new System.Drawing.Point(674, 188);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 22);
+            this.textBox21.TabIndex = 41;
+            this.textBox21.Text = "yyyy-mm-dd";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(658, 188);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(14, 20);
+            this.label60.TabIndex = 40;
+            this.label60.Text = "-";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox20.Location = new System.Drawing.Point(560, 188);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(92, 22);
+            this.textBox20.TabIndex = 39;
+            this.textBox20.Text = "yyyy-mm-dd";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(591, 213);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(183, 16);
+            this.label59.TabIndex = 38;
+            this.label59.Text = "Gennemsnit pris pr Kvm i DKK";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label58.Location = new System.Drawing.Point(570, 213);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(15, 16);
+            this.label58.TabIndex = 37;
+            this.label58.Text = "0";
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(431, 173);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(106, 39);
+            this.button10.TabIndex = 36;
+            this.button10.Text = "Vis Kvm Pris";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView6
             // 
@@ -2134,66 +2194,6 @@
             this.label32.Size = new System.Drawing.Size(74, 16);
             this.label32.TabIndex = 1;
             this.label32.Text = "Bo Nielsen";
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(431, 173);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(106, 39);
-            this.button10.TabIndex = 36;
-            this.button10.Text = "Vis Kvm Pris";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label58.Location = new System.Drawing.Point(570, 213);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(15, 16);
-            this.label58.TabIndex = 37;
-            this.label58.Text = "0";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(591, 213);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(183, 16);
-            this.label59.TabIndex = 38;
-            this.label59.Text = "Gennemsnit pris pr Kvm i DKK";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(560, 188);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(92, 22);
-            this.textBox20.TabIndex = 39;
-            this.textBox20.Text = "yyyy/mm/dd";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(658, 188);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(14, 20);
-            this.label60.TabIndex = 40;
-            this.label60.Text = "-";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(674, 188);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 22);
-            this.textBox21.TabIndex = 41;
-            this.textBox21.Text = "yyyy/mm/dd";
             // 
             // Form2
             // 

@@ -603,19 +603,50 @@ namespace AarsprojektSweetHome
         //Beregn Gennemsnit Kvm pris på udvalgt tidspunkt
         private void button10_Click(object sender, EventArgs e)
         {
-            //Huse Data
-            conn.Open(); //Åbner forbindelse til databasen
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM Huse";
-            cmd.ExecuteNonQuery();
+            try
+            {
+                //Huse Data
+                conn.Open(); //Åbner forbindelse til databasen
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Huse WHERE DatoForSalg BETWEEN '" + textBox20.Text + "' AND '" + textBox21.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt11 = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt11);
+                dataGridView6.DataSource = dt11;
 
-            DataTable dt11 = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt11);
-            dataGridView6.DataSource = dt11;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Indtast venligst korrekt format");
+                
+            }
 
-            conn.Close();
+            //Beregn gennemsnittet
+
+            decimal sum = 0;
+            for (int i = 0; i < dataGridView6.Rows.Count; ++i)
+            {
+                sum += Convert.ToDecimal(dataGridView6.Rows[i].Cells[7].Value);
+            }
+
+            decimal Antalkvm = 0;
+
+            for (int i = 0; i < dataGridView6.Rows.Count; ++i)
+            {
+                sum += Convert.ToDecimal(dataGridView6.Rows[i].Cells[5].Value);
+            }
+
+
+
+
+            decimal Gennemsnit = sum / Antalkvm;
+
+
+            label59.Text = Gennemsnit.ToString();
+           
         }
 
         #endregion
