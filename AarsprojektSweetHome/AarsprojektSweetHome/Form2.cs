@@ -600,7 +600,7 @@ namespace AarsprojektSweetHome
             label57.Text = Convert.ToString(JonSnit);
         }
 
-        //Beregn Gennemsnit Kvm pris på udvalgt tidspunkt
+        //Beregn Gennemsnit Kvm pris fra udvalgte datoer
         private void button10_Click(object sender, EventArgs e)
         {
             try
