@@ -445,7 +445,7 @@
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label58.Location = new System.Drawing.Point(570, 213);
+            this.label58.Location = new System.Drawing.Point(522, 213);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(15, 16);
             this.label58.TabIndex = 37;

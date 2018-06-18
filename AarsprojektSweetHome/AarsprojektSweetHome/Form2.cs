@@ -626,26 +626,26 @@ namespace AarsprojektSweetHome
 
             //Beregn gennemsnittet
 
-            decimal sum = 0;
+            long sum = 0;
             for (int i = 0; i < dataGridView6.Rows.Count; ++i)
             {
-                sum += Convert.ToDecimal(dataGridView6.Rows[i].Cells[7].Value);
+                sum += Convert.ToInt64(dataGridView6.Rows[i].Cells[12].Value);
             }
 
-            decimal Antalkvm = 0;
+            long Antalkvm = 0;
 
             for (int i = 0; i < dataGridView6.Rows.Count; ++i)
             {
-                sum += Convert.ToDecimal(dataGridView6.Rows[i].Cells[5].Value);
+                Antalkvm += Convert.ToInt64(dataGridView6.Rows[i].Cells[5].Value);
             }
 
 
 
 
-            decimal Gennemsnit = sum / Antalkvm;
+            long Gennemsnit = sum / Antalkvm;
 
 
-            label59.Text = Gennemsnit.ToString();
+            label58.Text = Gennemsnit.ToString();
            
         }
 
