@@ -640,12 +640,20 @@ namespace AarsprojektSweetHome
             }
 
 
+            try
+            {
+                long Gennemsnit = sum / Antalkvm;
 
 
-            long Gennemsnit = sum / Antalkvm;
+                label58.Text = Gennemsnit.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingen Data Fundet");
 
+            }
 
-            label58.Text = Gennemsnit.ToString();
+            
            
         }
 
