@@ -600,6 +600,24 @@ namespace AarsprojektSweetHome
             label57.Text = Convert.ToString(JonSnit);
         }
 
+        //Beregn Gennemsnit Kvm pris på udvalgt tidspunkt
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //Huse Data
+            conn.Open(); //Åbner forbindelse til databasen
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Huse";
+            cmd.ExecuteNonQuery();
+
+            DataTable dt11 = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt11);
+            dataGridView6.DataSource = dt11;
+
+            conn.Close();
+        }
+
         #endregion
 
 
@@ -608,7 +626,7 @@ namespace AarsprojektSweetHome
 
 
         #region Fordelervindue
-       
+
         //Tilføj bolig til udvalgte boliger
         private void button12_Click(object sender, EventArgs e)
         {
@@ -682,8 +700,9 @@ namespace AarsprojektSweetHome
             
         }
 
+
         #endregion
 
-
+        
     }
 }
